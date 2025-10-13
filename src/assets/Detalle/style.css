@@ -1,0 +1,26 @@
+.detalle {
+  background: #fff;
+  color: #2627F9;
+  border-radius: 16px;
+  padding: 32px;
+  margin: 32px auto;
+  max-width: 500px;
+  box-shadow: 0 2px 8px #6319FA33;
+  text-align: center;
+}
+
+.detalle h1 {
+  color: #B125FA;
+  margin-bottom: 16px;
+}
+
+.detalle button {
+  background: #6319FA;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  margin-top: 24px;
+  cursor: pointer;
+  font-size: 1.2em;
+}

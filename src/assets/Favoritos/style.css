@@ -1,0 +1,34 @@
+.favoritos {
+  background: #fff;
+  color: #2627F9;
+  border-radius: 16px;
+  padding: 32px;
+  margin: 32px auto;
+  max-width: 500px;
+  box-shadow: 0 2px 8px #2569FA33;
+}
+
+.favoritos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.favoritos li {
+  background: #25ACFA;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.favoritos button {
+  background: #B125FA;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 16px;
+  cursor: pointer;
+}

@@ -1,0 +1,15 @@
+.informativa {
+  background: #fff;
+  color: #2627F9;
+  border-radius: 16px;
+  padding: 32px;
+  margin: 32px auto;
+  max-width: 600px;
+  box-shadow: 0 2px 8px #25ACFA33;
+  text-align: center;
+}
+
+.informativa h2 {
+  color: #6319FA;
+  margin-bottom: 16px;
+}

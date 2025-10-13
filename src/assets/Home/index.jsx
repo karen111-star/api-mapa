@@ -1,95 +1,103 @@
-import './style.css' //map js en react se le agrega un elemento unico para ese ciclo usando el id 
-import { useEffect, useState } from 'react';
+import './style.css'
+import { useEffect, useState } from 'react'
 
-function Home(){
+/**
+ * Componente principal que muestra el menú, buscador y lista de universidades.
+ * Permite navegar entre pestañas y buscar universidades por nombre.
+ */
+function Home() {
+  // Estado para universidades, búsqueda, favoritos y modo de vista
+  const [universidades, setUniversidades] = useState([])
+  const [busqueda, setBusqueda] = useState('')
+  const [favoritos, setFavoritos] = useState([])
+  const [modo, setModo] = useState('lista') // lista, favoritos, detalle, informativa, original
+  const [detalle, setDetalle] = useState(null)
 
-  const [departamentos, setDepartamentos] = useState(null);
-  const [capitales, setCapitales] = useState(null);
-  const [modo, setModo] = useState("capitales");
-
-    useEffect(() => {
-    const urlDpt =
-      "https://gist.githubusercontent.com/diaztibata/fe3d238ee6b59ef71c8001654441a9f6/raw/4974a1b1cab3ac606dd96aa2d34d6e7c8e007daf/departamentosglobal.json";
-    const urlCpt =
-      "https://gist.githubusercontent.com/diaztibata/fe3d238ee6b59ef71c8001654441a9f6/raw/4974a1b1cab3ac606dd96aa2d34d6e7c8e007daf/capitalesglobal.json";
-// use se debe importar 
-// if ternarios 
-//otra (i== 0)? alert : otra 
-
-// para filtros usa parametros ?=
-//target referencia a ese elemento 
-     const fetchJson = async (url, setter) => {
+  // fetchJson: obtiene datos de la API y los guarda en el estado
+  useEffect(() => {
+    const fetchJson = async (url, setter) => {
       try {
-        const resp = await fetch(url);
-        if (!resp.ok) throw new Error("Error al cargar JSON: " + resp.status);
-        const json = await resp.json();
-        setter(json);
+        const resp = await fetch(url)
+        if (!resp.ok) throw new Error("Error al cargar JSON: " + resp.status)
+        const json = await resp.json()
+        setter(json)
       } catch (error) {
-        console.error("Fetch error:", error);
+        console.error("Fetch error:", error)
       }
-    };
+    }
+    fetchJson('http://universities.hipolabs.com/search?country=colombia', setUniversidades)
+  }, [])
 
-    
-    fetchJson(urlDpt, setDepartamentos);
-    fetchJson(urlCpt, setCapitales);
-  }, []);
+  // Filtra universidades por nombre usando el estado de búsqueda
+  const universidadesFiltradas = universidades.filter(u =>
+    u.name.toLowerCase().includes(busqueda.toLowerCase())
+  )
 
-
-    return (
-        <>
-        <div>
-        <button onClick={() => setModo("departamentos")}></button>
-        <button onClick={() => setModo("capitales")}></button>
-        </div>    
-        
-    <div>
-
-      <div>
-        <button onClick={() => setModo("departamentos")}>
-          Mostrar Departamentos
-        </button>
-        <button onClick={() => setModo("capitales")}>Mostrar Capitales</button>
-      </div>
-
-      <div>
-        <input
-          type="text"
-          placeholder="Buscar por nombre..."
-          value={busqueda}
-          onChange={(e) => setBusqueda(e.target.value)}
-        />
-      </div>
-      </div> //elementos de la lista 
-
-      <div className='Lugar '>
-        {
-        // Verificar que capitales y capitales.data existen antes de mapear
-        !capitales ? (
-         <p>Cargando...</p>
-        ) : (
-        capitales.data.cpt.map((item) => (
-         <p key={item.id}>
-        {item.nm}
-    </p>
-  ))
-)
-}
-
-        <p> Nombre  <span> numero de votos </span></p> 
-        <div>
-            <p>Candidatos </p>
-            <ul>
-                <li>Candidatos1</li>
-                <li>Candidatos2</li> // se utiliza class name //fetch llama la url a la app 
-            </ul>
-        </div>
-      </div>
-
-       
-    </>    
-
+  // Añade/quita universidad de favoritos
+  const toggleFavorito = (uni) => {
+    setFavoritos(favs =>
+      favs.some(f => f.name === uni.name)
+        ? favs.filter(f => f.name !== uni.name)
+        : [...favs, uni]
     )
-    
+  }
+
+  // Muestra detalle de universidad seleccionada
+  const mostrarDetalle = (uni) => {
+    setDetalle(uni)
+    setModo('detalle')
+  }
+
+  // Menú de navegación entre pestañas
+  return (
+    <div>
+      <nav>
+        <button onClick={() => setModo('lista')}>Lista</button>
+        <button onClick={() => setModo('favoritos')}>Favoritos</button>
+        <button onClick={() => setModo('original')}>Original</button>
+        <button onClick={() => setModo('informativa')}>Informativa</button>
+      </nav>
+
+      {modo === 'lista' && (
+        <>
+          <input
+            type="text"
+            placeholder="Buscar universidad..."
+            value={busqueda}
+            onChange={e => setBusqueda(e.target.value)}
+          />
+          <ul>
+            {universidadesFiltradas.map(uni => (
+              <li key={uni.name}>
+                <span onClick={() => mostrarDetalle(uni)}>{uni.name}</span>
+                <button onClick={() => toggleFavorito(uni)}>
+                  {favoritos.some(f => f.name === uni.name) ? 'Quitar de favoritos' : 'Agregar a favoritos'}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+
+      {modo === 'favoritos' && (
+        <ul>
+          {favoritos.map(uni => (
+            <li key={uni.name}>
+              <span onClick={() => mostrarDetalle(uni)}>{uni.name}</span>
+              <button onClick={() => toggleFavorito(uni)}>Quitar de favoritos</button>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {modo === 'detalle' && detalle && (
+        <Detalle universidad={detalle} volver={() => setModo('lista')} />
+      )}
+
+      {modo === 'informativa' && <Informativa />}
+      {modo === 'original' && <Original universidades={universidades} />}
+    </div>
+  )
 }
 
-export default Home 
+export default Home
