@@ -22,7 +22,7 @@ function Home() {
         console.error("Fetch error:", error)
       }
     }
-    fetchJson('https://universities.hipolabs.com/search?country=colombia', setUniversidades)
+    fetchJson('../json/colombia.json', setUniversidades)
   }, [])
 
   // Filtra universidades por nombre 

@@ -1,0 +1,1034 @@
+[
+  {
+    "name": "Universidad Atlantida Argentina",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.atlantida.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "atlantida.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Austral Buenos Aires",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.austral.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "austral.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad CAECE, Buenos Aires",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.caece.edu.ar/"
+    ],
+    "state-province": "Ciudad Autónoma de Buenos Aires",
+    "domains": [
+      "caece.edu.ar"
+    ]
+  },
+  {
+    "name": "Instituto Universitario CEMA",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "https://ucema.edu.ar/"
+    ],
+    "state-province": "Ciudad Autónoma de Buenos Aires",
+    "domains": [
+      "ucema.edu.ar"
+    ]
+  },
+  {
+    "name": "Instituto de Enseñanza Superior del Ejército",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.iese.edu.ar/"
+    ],
+    "state-province": "Ciudad Autónoma de Buenos Aires",
+    "domains": [
+      "iese.edu.ar"
+    ]
+  },
+  {
+    "name": "Instituto Universitario de Estudios Navales y Marítimos",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.inun.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "inun.edu.ar"
+    ]
+  },
+  {
+    "name": "Instituto Tecnológico de Buenos Aires",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.itba.edu.ar/"
+    ],
+    "state-province": "Ciudad Autónoma de Buenos Aires",
+    "domains": [
+      "itba.edu.ar"
+    ]
+  },
+  {
+    "name": "Instituto Universitario Aeronáutico",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.iua.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "iua.edu.ar"
+    ]
+  },
+  {
+    "name": "Instituto Universitario de Ciencias de la Salud - Buenos Aires",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://iucs.uncoma.edu.ar/"
+    ],
+    "state-province": "Ciudad Autónoma de Buenos Aires",
+    "domains": [
+      "iucs.uncoma.edu.ar"
+    ]
+  },
+  {
+    "name": "Instituto Universitario Nacional del Arte",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.iuna.edu.ar/"
+    ],
+    "state-province": "Ciudad Autónoma de Buenos Aires",
+    "domains": [
+      "iuna.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Argentina \"John F. Kennedy\"",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.kennedy.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "kennedy.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Maimónides",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.maimonides.edu.ar/"
+    ],
+    "state-province": "Ciudad Autónoma de Buenos Aires",
+    "domains": [
+      "maimonides.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de Mar del Plata",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.mdp.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "mdp.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad de Palermo",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.palermo.edu/"
+    ],
+    "state-province": "Ciudad Autónoma de Buenos Aires",
+    "domains": [
+      "palermo.edu"
+    ]
+  },
+  {
+    "name": "Universidad del Salvador",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.salvador.edu.ar/"
+    ],
+    "state-province": "Ciudad Autónoma de Buenos Aires",
+    "domains": [
+      "salvador.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Argentina de la Empresa",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.uade.edu.ar/"
+    ],
+    "state-province": "Ciudad Autónoma de Buenos Aires",
+    "domains": [
+      "uade.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Autónoma de Entre Ríos",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.uader.edu.ar/"
+    ],
+    "state-province": "Entre Ríos",
+    "domains": [
+      "uader.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Adventista del Plata",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.uapar.edu/"
+    ],
+    "state-province": "Entre Ríos",
+    "domains": [
+      "uapar.edu"
+    ]
+  },
+  {
+    "name": "Universidad de Buenos Aires",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.uba.ar/"
+    ],
+    "state-province": "Ciudad Autónoma de Buenos Aires",
+    "domains": [
+      "uba.ar"
+    ]
+  },
+  {
+    "name": "Universidad de Belgrano",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.ub.edu.ar/"
+    ],
+    "state-province": "Ciudad Autónoma de Buenos Aires",
+    "domains": [
+      "ub.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Blas Pascal",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.ubp.edu.ar/"
+    ],
+    "state-province": "Ciudad Autónoma de Buenos Aires",
+    "domains": [
+      "ubp.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Católica Argentina Santa Maria de los Buenos Aires",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.uca.edu.ar/"
+    ],
+    "state-province": "Ciudad Autónoma de Buenos Aires",
+    "domains": [
+      "uca.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Católica de La Plata",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.ucalp.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "ucalp.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Católica de Salta",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.ucasal.net/"
+    ],
+    "state-province": "Salta",
+    "domains": [
+      "ucasal.net"
+    ]
+  },
+  {
+    "name": "Universidad Católica de Córdoba",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.uccor.edu.ar/"
+    ],
+    "state-province": "Córdoba",
+    "domains": [
+      "uccor.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Católica de Cuyo",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.uccuyo.edu.ar/"
+    ],
+    "state-province": "Mendoza",
+    "domains": [
+      "uccuyo.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad del Centro Educativo Latinoamericano Rosario",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.ucel.edu.ar/"
+    ],
+    "state-province": "Santa Fé",
+    "domains": [
+      "ucel.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad de Ciencias Empresariales y Sociales",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.uces.edu.ar/"
+    ],
+    "state-province": "Ciudad Autónoma de Buenos Aires",
+    "domains": [
+      "uces.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Champagnat",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.uch.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "uch.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad del Cine - Buenos Aires",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.ucine.edu.ar/"
+    ],
+    "state-province": "Ciudad Autónoma de Buenos Aires",
+    "domains": [
+      "ucine.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad de Congreso",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.ucongres.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "ucongres.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad de la Cuenca del Plata",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.ucp.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "ucp.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Católica de Santiago del Estero",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.ucse.edu.ar/"
+    ],
+    "state-province": "Santiago Del Estero",
+    "domains": [
+      "ucse.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Católica de Santa Fé",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.ucsf.edu.ar/"
+    ],
+    "state-province": "Santa Fé",
+    "domains": [
+      "ucsf.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad de Concepción del Uruguay",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.ucu.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "ucu.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad del Aconcagua",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.uda.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "uda.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad de la Marina Mercante",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.udemm.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "udemm.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad de San Andres",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.udesa.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "udesa.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Empresarial Siglio 21",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.uesiglo21.edu.ar/"
+    ],
+    "state-province": "Córdoba",
+    "domains": [
+      "uesiglo21.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad de la Fraternidad de Agrupaciones Santo Tomas de Aquino (FASTA)",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.ufasta.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "ufasta.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad de Flores - Buenos Aires",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.uflo.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "uflo.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad \"Juan Agustín Maza\"",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.umaza.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "umaza.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad de Mendoza",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.um.edu.ar/"
+    ],
+    "state-province": "Mendoza",
+    "domains": [
+      "um.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad del Museo Social Argentino",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.umsa.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "umsa.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de Misiones",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unam.edu.ar/"
+    ],
+    "state-province": "Misiones",
+    "domains": [
+      "unam.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de Catamarca",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unca.edu.ar/"
+    ],
+    "state-province": "Catamarca",
+    "domains": [
+      "unca.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de Córdoba",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unc.edu.ar/"
+    ],
+    "state-province": "Córdoba",
+    "domains": [
+      "unc.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional del Comahue",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.uncoma.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "uncoma.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de Cuyo",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.uncu.edu.ar/"
+    ],
+    "state-province": "Mendoza",
+    "domains": [
+      "uncu.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de Entre Ríos",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.uner.edu.ar/"
+    ],
+    "state-province": "Entre Ríos",
+    "domains": [
+      "uner.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de Formosa",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unf.edu.ar/"
+    ],
+    "state-province": "Formosa",
+    "domains": [
+      "unf.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de General Sarmiento",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.ungs.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "ungs.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad de Bologna - Representación en Buenos Aires",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unibo.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "unibo.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional del Centro de la Provincia de Buenos Aires",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unicen.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "unicen.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad de Morón",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unimoron.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "unimoron.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Notarial Argentina",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.universidadnotarial.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "universidadnotarial.edu.ar"
+    ]
+  },
+  {
+    "name": "Instituto Universitario de la Policia Federal",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.universidad-policial.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "universidad-policial.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de Jujuy",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unju.edu.ar/"
+    ],
+    "state-province": "Jujuy",
+    "domains": [
+      "unju.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de Lanus",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unla.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "unla.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de La Matanza",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unlam.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "unlam.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de La Rioja",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unlar.edu.ar/"
+    ],
+    "state-province": "La Rioja",
+    "domains": [
+      "unlar.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional del Litoral",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unl.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "unl.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de La Pampa",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unlpam.edu.ar/"
+    ],
+    "state-province": "La Pampa",
+    "domains": [
+      "unlpam.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de La Plata",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unlp.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "unlp.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de Luján",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unlu.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "unlu.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de Lomas de Zamora",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unlz.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "unlz.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional del Nordeste",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unne.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "unne.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional del Noroeste de la Provincia de Buenos Aires",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unnoba.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "unnoba.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de la Patagonia Austral",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unpa.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "unpa.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de la Patagonia \"San Juan Bosco\"",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unp.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "unp.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de Quilmes",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unq.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "unq.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de Río Cuarto",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unrc.edu.ar/"
+    ],
+    "state-province": "Córdoba",
+    "domains": [
+      "unrc.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de Rosario",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unr.edu.ar/"
+    ],
+    "state-province": "Santa Fé",
+    "domains": [
+      "unr.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de Salta",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unsa.edu.ar/"
+    ],
+    "state-province": "Salta",
+    "domains": [
+      "unsa.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de General San Martín",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unsam.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "unsam.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional del Sur",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.uns.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "uns.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de Santiago del Estero",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unse.edu.ar/"
+    ],
+    "state-province": "Santiago Del Estero",
+    "domains": [
+      "unse.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de San Juan",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unsj.edu.ar/"
+    ],
+    "state-province": "San Juan",
+    "domains": [
+      "unsj.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de San Luis",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unsl.edu.ar/"
+    ],
+    "state-province": "San Luis",
+    "domains": [
+      "unsl.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad del Norte \"Santo Tomás de Aquino\"",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unsta.edu.ar/"
+    ],
+    "state-province": null,
+    "domains": [
+      "unsta.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de Tucumán",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.unt.edu.ar/"
+    ],
+    "state-province": "Tucumán",
+    "domains": [
+      "unt.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de Tres de Febrero",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.untref.edu.ar/"
+    ],
+    "state-province": "Buenos Aires",
+    "domains": [
+      "untref.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Torcuato di Tella",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.utdt.edu/"
+    ],
+    "state-province": "Ciudad Autónoma de Buenos Aires",
+    "domains": [
+      "utdt.edu"
+    ]
+  },
+  {
+    "name": "Universidad Tecnológica Nacional",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.utn.edu.ar/"
+    ],
+    "state-province": "Ciudad Autónoma de Buenos Aires",
+    "domains": [
+      "utn.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Abierta Interamericana",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://www.vaneduc.edu.ar/uai/"
+    ],
+    "state-province": "Ciudad Autónoma de Buenos Aires",
+    "domains": [
+      "vaneduc.edu.ar"
+    ]
+  },
+  {
+    "name": "Universidad Nacional de Villa María",
+    "alpha_two_code": "AR",
+    "country": "Argentina",
+    "web_pages": [
+      "http://webs.satlink.com/usuarios/i/iiunvm/"
+    ],
+    "state-province": null,
+    "domains": [
+      "webs.satlink.com"
+    ]
+  }
+]
