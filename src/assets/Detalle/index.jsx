@@ -1,27 +1,23 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState, useContext } from 'react';
-import { AppContext } from '../../contexto'; // Ajusta la ruta según donde esté tu contexto
-
-/**
- * Componente que muestra el detalle de una universidad.
- * Permite agregar/quitar de favoritos usando el contexto global.
- */
+import { AppContext } from '../../contexto'; 
+import './style.css';
 function Detalle() {
-  // Obtiene el nombre de la universidad desde la URL
+
   const { nombre } = useParams();
   const [uniData, setUniData] = useState(null);
 
-  // Accede a favoritos y función para modificarlos desde el contexto
+  //función para modificarlos desde el contexto
   const { favoritos, setFavoritos } = useContext(AppContext);
 
-  // Verifica si la universidad está en favoritos
+  // miraa si la universidad está en favoritos
   const esFavorito = favoritos.some(u => u.name === nombre);
 
-  // Carga los datos de la universidad seleccionada
+  // datos de la universidad seleccionada
   useEffect(() => {
     if (!nombre) return;
 
-    const url = `http://universities.hipolabs.com/search?country=colombia&name=${encodeURIComponent(nombre)}`;
+   const url = `https://universities.hipolabs.com/search?country=colombia&name=${encodeURIComponent(nombre)}`;
 
     const fetchData = async () => {
       try {
@@ -38,7 +34,7 @@ function Detalle() {
     fetchData();
   }, [nombre]);
 
-  // Añade o quita la universidad de favoritos
+  // añade y quita universidad de favoritos
   const toggleFavorito = () => {
     if (!uniData) return;
     if (esFavorito) {

@@ -1,13 +1,9 @@
 import { useEffect, useState } from 'react';
 
-/**
- * Componente Filtro para universidades.
- * Permite filtrar por país o por dominio.
- */
 function Filtro({ tipoSeleccionado, setTipoSeleccionado, setData }) {
   useEffect(() => {
     const obtenerDatos = async () => {
-      let url = 'http://universities.hipolabs.com/search?country=colombia';
+      let url = 'https://universities.hipolabs.com/search?country=colombia';
       if (tipoSeleccionado && tipoSeleccionado !== 'Todos') {
         url += `&domain=${tipoSeleccionado}`;
       }
@@ -19,7 +15,7 @@ function Filtro({ tipoSeleccionado, setTipoSeleccionado, setData }) {
     obtenerDatos();
   }, [tipoSeleccionado, setData]);
 
-  // No usar HTML, solo menú permitido
+
   return (
     <>
       <div>

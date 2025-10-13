@@ -1,9 +1,5 @@
 import './style.css'
 
-/**
- * Componente que muestra la lista de universidades favoritas.
- * Recibe favoritos y función para quitar favoritos por prop.
- */
 function Favoritos({ favoritos, quitarFavorito, mostrarDetalle }) {
   return (
     <div className="favoritos">

@@ -1,16 +1,13 @@
 import './style.css'
 import { useEffect, useState } from 'react'
 
-/**
- * Componente principal que muestra el menú, buscador y lista de universidades.
- * Permite navegar entre pestañas y buscar universidades por nombre.
- */
+
 function Home() {
-  // Estado para universidades, búsqueda, favoritos y modo de vista
+
   const [universidades, setUniversidades] = useState([])
   const [busqueda, setBusqueda] = useState('')
   const [favoritos, setFavoritos] = useState([])
-  const [modo, setModo] = useState('lista') // lista, favoritos, detalle, informativa, original
+  const [modo, setModo] = useState('lista') 
   const [detalle, setDetalle] = useState(null)
 
   // fetchJson: obtiene datos de la API y los guarda en el estado
@@ -25,15 +22,15 @@ function Home() {
         console.error("Fetch error:", error)
       }
     }
-    fetchJson('http://universities.hipolabs.com/search?country=colombia', setUniversidades)
+    fetchJson('https://universities.hipolabs.com/search?country=colombia', setUniversidades)
   }, [])
 
-  // Filtra universidades por nombre usando el estado de búsqueda
+  // Filtra universidades por nombre 
   const universidadesFiltradas = universidades.filter(u =>
     u.name.toLowerCase().includes(busqueda.toLowerCase())
   )
 
-  // Añade/quita universidad de favoritos
+  // aañade/quita universidad de favoritos
   const toggleFavorito = (uni) => {
     setFavoritos(favs =>
       favs.some(f => f.name === uni.name)
@@ -42,13 +39,12 @@ function Home() {
     )
   }
 
-  // Muestra detalle de universidad seleccionada
   const mostrarDetalle = (uni) => {
     setDetalle(uni)
     setModo('detalle')
   }
 
-  // Menú de navegación entre pestañas
+  // menu de navegación
   return (
     <div>
       <nav>
