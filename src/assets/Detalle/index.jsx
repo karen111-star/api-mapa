@@ -1,60 +1,55 @@
-import { useParams } from 'react-router-dom';
-import { useEffect, useState, useContext } from 'react';
-import { AppContext } from '../../contexto'; 
-import './style.css';
-function Detalle() {
+// Importamos React y los hooks necesarios
+import { useState, useEffect } from "react";
+import "./style.css"; // Importamos los estilos específicos para Detalle
 
-  const { nombre } = useParams();
-  const [uniData, setUniData] = useState(null);
+function Detalle({ universidad, volver }) {
+  // Estado local para detectar si esta universidad está en favoritos
+  const [esFavorito, setEsFavorito] = useState(false);
 
-  //función para modificarlos desde el contexto
-  const { favoritos, setFavoritos } = useContext(AppContext);
-
-  // miraa si la universidad está en favoritos
-  const esFavorito = favoritos.some(u => u.name === nombre);
-
-  // datos de la universidad seleccionada
+  // si estamarcada como favorita en localStorage
   useEffect(() => {
-    if (!nombre) return;
+    const favs = JSON.parse(localStorage.getItem("favoritos")) || [];
+    const existe = favs.some((f) => f.name === universidad.name);
+    setEsFavorito(existe);
+  }, [universidad]);
 
-   const url = `https://universities.hipolabs.com/search?country=colombia&name=${encodeURIComponent(nombre)}`;
-
-    const fetchData = async () => {
-      try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
-
-        const data = await response.json();
-        setUniData(data[0]); // Toma la primera coincidencia
-      } catch (error) {
-        console.error("Error al cargar la universidad:", error);
-      }
-    };
-
-    fetchData();
-  }, [nombre]);
-
-  // añade y quita universidad de favoritos
+  //guarda y elimina en localStorage los fav
   const toggleFavorito = () => {
-    if (!uniData) return;
+    let favs = JSON.parse(localStorage.getItem("favoritos")) || [];
+
     if (esFavorito) {
-      setFavoritos(favoritos.filter(u => u.name !== nombre));
+      // Si ya está, la eliminamos
+      favs = favs.filter((f) => f.name !== universidad.name);
     } else {
-      setFavoritos([...favoritos, uniData]);
+      // Si no está, la agregamos
+      favs.push(universidad);
     }
+
+    localStorage.setItem("favoritos", JSON.stringify(favs));
+    setEsFavorito(!esFavorito);
   };
 
-  if (!uniData) return <p>Cargando universidad...</p>;
-
   return (
-    <div>
-      <h1>{uniData.name}</h1>
-      <p>País: {uniData.country}</p>
-      <p>Dominio: {uniData.domains[0]}</p>
-      <p>Web: <a href={uniData.web_pages[0]} target="_blank" rel="noopener noreferrer">{uniData.web_pages[0]}</a></p>
-      <button onClick={toggleFavorito}>
-        {esFavorito ? '❤️' : '🤍'}
-      </button>
+    <div className="detalle-container">
+      <div className="detalle-card">
+        {/* Nombre de la uni */}
+        <h1 className="detalle-nombre">{universidad.name}</h1>
+
+        {/* link web */}
+        <a
+          href={universidad.web_pages[0]}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="detalle-link"
+        >
+          {universidad.web_pages[0]}
+        </a>
+
+        {/*favorito */}
+        <button className="detalle-fav-btn" onClick={toggleFavorito}>
+          {esFavorito ? "❤️ Quitar de favoritos" : "🤍 Agregar a favoritos"}
+        </button>
+      </div>
     </div>
   );
 }

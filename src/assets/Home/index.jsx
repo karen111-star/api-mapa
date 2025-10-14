@@ -1,13 +1,14 @@
-import './style.css'
+import './style.css' 
 import { useEffect, useState } from 'react'
-
+import Informativa from '../Informativa'
+import Detalle from '../Detalle'
 
 function Home() {
 
   const [universidades, setUniversidades] = useState([])
   const [busqueda, setBusqueda] = useState('')
   const [favoritos, setFavoritos] = useState([])
-  const [modo, setModo] = useState('lista') 
+  const [modo, setModo] = useState('home') 
   const [detalle, setDetalle] = useState(null)
 
   // fetchJson: obtiene datos de la API y los guarda en el estado
@@ -23,6 +24,7 @@ function Home() {
       }
     }
     fetchJson('../json/colombia.json', setUniversidades)
+    fetchJson('../json/argentina.json', setUniversidades)
   }, [])
 
   // Filtra universidades por nombre 
@@ -40,21 +42,22 @@ function Home() {
   }
 
   const mostrarDetalle = (uni) => {
-    setDetalle(uni)
-    setModo('detalle')
+    setDetalle(uni)  //Guarda la uni que fue clickeada en  detalle 
+    setModo('detalle')// cambio de home a detalle 
   }
 
   // menu de navegación
   return (
     <div>
       <nav>
-        <button onClick={() => setModo('lista')}>Lista</button>
-        <button onClick={() => setModo('favoritos')}>Favoritos</button>
-        <button onClick={() => setModo('original')}>Original</button>
-        <button onClick={() => setModo('informativa')}>Informativa</button>
+        <button onClick={() => setModo('home')}>Home</button>
+        <button onClick={() => setModo('detalle')}>detalle</button>
+        <button onClick={() => setModo('favoritos')}>favoritos</button>
+        <button onClick={() => setModo('informativa')}>informativa</button>
+        <button onClick={() => setModo('original')}>original</button>
       </nav>
 
-      {modo === 'lista' && (
+      {modo === 'home' && (
         <>
           <input
             type="text"
@@ -67,7 +70,7 @@ function Home() {
               <li key={uni.name}>
                 <span onClick={() => mostrarDetalle(uni)}>{uni.name}</span>
                 <button onClick={() => toggleFavorito(uni)}>
-                  {favoritos.some(f => f.name === uni.name) ? 'Quitar de favoritos' : 'Agregar a favoritos'}
+                  {favoritos.some(f => f.name === uni.name) ? '❤️' : '🤍'}
                 </button>
               </li>
             ))}
@@ -79,19 +82,18 @@ function Home() {
         <ul>
           {favoritos.map(uni => (
             <li key={uni.name}>
-              <span onClick={() => mostrarDetalle(uni)}>{uni.name}</span>
-              <button onClick={() => toggleFavorito(uni)}>Quitar de favoritos</button>
+              <span onClick={() => mostrarDetalle(uni)}>{uni.name}</span> {/* captura el clic  del nombre a favorito */}
+              <button onClick={() => toggleFavorito(uni)}>❤️</button>
             </li>
           ))}
         </ul>
       )}
 
       {modo === 'detalle' && detalle && (
-        <Detalle universidad={detalle} volver={() => setModo('lista')} />
+        <Detalle universidad={detalle} volver={() => setModo('home')} />
       )}
 
       {modo === 'informativa' && <Informativa />}
-      {modo === 'original' && <Original universidades={universidades} />}
     </div>
   )
 }

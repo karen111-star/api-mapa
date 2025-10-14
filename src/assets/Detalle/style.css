@@ -1,26 +1,81 @@
-.detalle {
-  background: #fff;
-  color: #2627F9;
-  border-radius: 16px;
-  padding: 32px;
-  margin: 32px auto;
-  max-width: 500px;
-  box-shadow: 0 2px 8px #6319FA33;
+/* --- CONTENEDOR GENERAL (fondo negro y centrado) --- */
+.detalle-container {
+  background: #000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+/* --- TARJETA DETALLE --- */
+.detalle-card {
+  background: #111;
+  padding: 40px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 450px;
   text-align: center;
+  box-shadow: 0 0 25px rgba(43, 226, 220, 0.3);
+  border: 1px solid rgba(39, 130, 221, 0.2);
+  transition: 0.2s;
 }
 
-.detalle h1 {
-  color: #B125FA;
-  margin-bottom: 16px;
+.detalle-card:hover {
+  transform: scale(1.02);
 }
 
-.detalle button {
-  background: #6319FA;
-  color: #fff;
+/* --- TEXTO DE NOMBRE --- */
+.detalle-nombre {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 12px;
+  text-shadow: 0 0 6px rgba(43, 226, 177, 0.5);
+}
+
+/* --- LINK WEB --- */
+.detalle-link {
+  color: #1ce0e3;
+  font-size: 14px;
+  text-decoration: none;
+  word-break: break-all;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.detalle-link:hover {
+  text-decoration: underline;
+}
+
+/* --- BOTÓN --- */
+.detalle-fav-btn {
+  background: linear-gradient;
+  color: white;
   border: none;
-  padding: 10px 24px;
+  padding: 12px 20px;
   border-radius: 8px;
-  margin-top: 24px;
   cursor: pointer;
-  font-size: 1.2em;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.detalle-fav-btn:hover {
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 480px) {
+  .detalle-card {
+    padding: 25px;
+    max-width: 95%;
+  }
+
+  .detalle-nombre {
+    font-size: 20px;
+  }
+
+  .detalle-fav-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
 }

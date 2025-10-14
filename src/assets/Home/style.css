@@ -1,49 +1,73 @@
-.home-container {
-  background: #fff;
-  min-height: 100vh;
-  padding: 32px;
+/* Lista general (ya existente, mantenla) */
+.lista-universidades {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 500px;
 }
 
-nav {
-  margin-bottom: 24px;
-  text-align: center;
-}
-
-nav button {
-  background: #2569FA;
-  color: #fff;
-  border: none;
-  margin: 0 8px;
-  padding: 10px 24px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-nav button.active {
-  background: #6319FA;
-}
-
+/* Tarjetas de universidades - borde morado y esquinas redondeadas */
 .universidad-card {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px #2569FA33;
-  padding: 24px;
-  margin: 16px 0;
-  text-align: center;
-  color: #2627F9;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #0d0808;
+  border-radius: 16px;        /* esquinas redondeadas (la "caja") */
+  padding: 14px 18px;
+  color: #341f97;
+  font-weight: 700;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+  border: 2px solid #6a1aff;   /* borde morado */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  cursor: default;
+  /* Evita que el texto se desborde de la "caja" */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.universidad-card h3 {
-  margin-bottom: 8px;
-  color: #6319FA;
+/* Efecto hover para la tarjeta */
+.universidad-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
 }
 
-.universidad-card img {
-  margin-top: 8px;
-  width: 48px;
-  height: 48px;
-  border-radius: 8px;
-  background: #f0f0f0;
+/* Botón de corazón - fuera de la "caja" de texto */
+.fav-btn {
+  
+  border: none;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  /* Asegura que el corazon no parezca dentro de la caja de la uni */
+  flex: 0 0 auto;
+}
+.fav-btn:hover {
+  transform: scale(1.15);
+  background: #ffe6e600;
+}
+
+/* Nombre de la universidad - texto con apariencia de etiqueta/badge (cagita) */
+.nombre-uni {
+  background: rgba(151, 198, 33, 0.08); /* ligero fondo para “cagita” suave */
+  color: #f8f8f8;
+  font-weight: 700;
+  padding: 20px 18px;
+  border-radius: 999px; /* borde redondeado tipo badge/chip */
+  white-space: nowrap;
+  display: inline-block;
+  /* Evita que el texto se desborde fuera de la tarjeta */
+  max-width: calc(100% - 60px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
 }

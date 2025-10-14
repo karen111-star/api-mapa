@@ -1,6 +1,6 @@
 .informativa {
-  background: #fff;
-  color: #2627F9;
+  background: #000000;
+  color: #fbfbfb;
   border-radius: 16px;
   padding: 32px;
   margin: 32px auto;
@@ -9,7 +9,8 @@
   text-align: center;
 }
 
-.informativa h2 {
-  color: #6319FA;
+.h2 {
+  color: #5e14f1;
   margin-bottom: 16px;
+  text-shadow: #bdf114;
 }

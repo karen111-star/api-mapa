@@ -1,42 +1,66 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  background: #000000; /* Azul universidad */
+  color: #F5F5F5;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+li {
+  background: #0878974e; 
+  margin: 10px 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
-.card {
-  padding: 2em;
+li:hover {
+  transform: translateX(4px);
+  background: #15335A;
 }
 
-.read-the-docs {
-  color: #888;
+button {
+  background: #000000; /* Celeste */
+border: 1px solid #1d118dfd;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #25718d;
+  color: aliceblue;
+  transform: scale(1.05);
+}
+
+button.favorito-activo {
+  background: #FFC300; /* Amarillo premiación */
+  color: #000000;
+}
+
+input {
+  background: #112B4A;
+  border: 1px solid #3bda80;
+  padding: 8px;
+  width: 100%;
+  border-radius: 6px;
+  color: rgb(3, 244, 79);
+  margin-bottom: 15px;
 }
