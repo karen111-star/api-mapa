@@ -3,6 +3,16 @@ import { useEffect, useState } from 'react'
 import Informativa from '../Informativa'
 import Detalle from '../Detalle'
 
+// Componente Splash de carga
+const Splash = () => {
+  return (
+    <div className="splash">
+      <div className="spinner"></div>
+      <p>Cargando...</p>
+    </div>
+  )
+}
+
 function Home() {
   const [universidades, setUniversidades] = useState([])
   const [busqueda, setBusqueda] = useState('')
@@ -13,6 +23,7 @@ function Home() {
   const [favoritos, setFavoritos] = useState([])
   const [modo, setModo] = useState('home')
   const [detalle, setDetalle] = useState(null)
+  const [cargando, setCargando] = useState(true)  // Estado para mostrar el splash
 
   // Carga y combina los JSON
   useEffect(() => {
@@ -32,13 +43,30 @@ function Home() {
         )
 
         setUniversidades(resultados.flat())
+
       } catch (error) {
         console.error('Fetch error:', error)
       }
     }
 
     fetchJson()
+
+    // Establecemos el tiempo del splash
+    const timeoutId = setTimeout(() => {
+      setCargando(false)  // Después de 5 segundos, se desactiva el splash
+    }, 5000)
+
+    // Limpiamos el timeout cuando el componente se desmonte
+    return () => clearTimeout(timeoutId)
+
   }, [])
+
+  useEffect(() => {
+    // Una vez que los datos se carguen, desactivamos el splash si ya pasó el tiempo de 5 segundos
+    if (universidades.length > 0) {
+      setCargando(false)
+    }
+  }, [universidades])  // Este useEffect se activa cuando los datos se han cargado
 
   // 🔹 Extraer listas dinámicas para los selects
   const paises = [...new Set(universidades.map(u => u.country).filter(Boolean))]
@@ -75,83 +103,89 @@ function Home() {
 
   return (
     <div>
-      <nav>
-        <button onClick={() => setModo('home')}>Home</button>
-        <button onClick={() => setModo('detalle')}>Detalle</button>
-        <button onClick={() => setModo('favoritos')}>Favoritos</button>
-        <button onClick={() => setModo('informativa')}>Informativa</button>
-      </nav>
-
-      {modo === 'home' && (
+      {cargando ? (
+        <Splash />
+      ) : (
         <>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', margin: '1rem 0' }}>
-            {/* 🔍 Búsqueda por nombre */}
-            <input
-              type="text"
-              placeholder="Buscar universidad..."
-              value={busqueda}
-              onChange={e => setBusqueda(e.target.value)}
-            />
+          <nav>
+            <button onClick={() => setModo('home')}>Home</button>
+            <button onClick={() => setModo('detalle')}>Detalle</button>
+            <button onClick={() => setModo('favoritos')}>Favoritos</button>
+            <button onClick={() => setModo('informativa')}>Informativa</button>
+          </nav>
 
-            {/* 🌎 Filtro por país */}
-            <select value={pais} onChange={e => setPais(e.target.value)}>
-              <option value="">Todos los países</option>
-              {paises.map(p => <option key={p} value={p}>{p}</option>)}
-            </select>
+          {modo === 'home' && (
+            <>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', margin: '1rem 0' }}>
+                {/* 🔍 Búsqueda por nombre */}
+                <input
+                  type="text"
+                  placeholder="Buscar universidad..."
+                  value={busqueda}
+                  onChange={e => setBusqueda(e.target.value)}
+                />
 
-            {/* 🏛️ Filtro por provincia (si existe) */}
-            <select value={provincia} onChange={e => setProvincia(e.target.value)}>
-              <option value="">Todas las provincias</option>
-              {provincias.map(p => <option key={p} value={p}>{p}</option>)}
-            </select>
+                {/* 🌎 Filtro por país */}
+                <select value={pais} onChange={e => setPais(e.target.value)}>
+                  <option value="">Todos los países</option>
+                  {paises.map(p => <option key={p} value={p}>{p}</option>)}
+                </select>
 
-            {/* 🌐 Filtro por dominio */}
-            <select value={dominio} onChange={e => setDominio(e.target.value)}>
-              <option value="">Todos los dominios</option>
-              {dominios.map(d => <option key={d} value={d}>{d}</option>)}
-            </select>
+                {/* 🏛️ Filtro por provincia (si existe) */}
+                <select value={provincia} onChange={e => setProvincia(e.target.value)}>
+                  <option value="">Todas las provincias</option>
+                  {provincias.map(p => <option key={p} value={p}>{p}</option>)}
+                </select>
 
-            {/* 🔤 Orden */}
-            <select value={orden} onChange={e => setOrden(e.target.value)}>
-              <option value="">Sin ordenar</option>
-              <option value="nombre">Ordenar por nombre</option>
-              <option value="pais">Ordenar por país</option>
-            </select>
-          </div>
+                {/* 🌐 Filtro por dominio */}
+                <select value={dominio} onChange={e => setDominio(e.target.value)}>
+                  <option value="">Todos los dominios</option>
+                  {dominios.map(d => <option key={d} value={d}>{d}</option>)}
+                </select>
 
-          {/* 📋 Lista filtrada */}
-          <ul>
-            {universidadesFiltradas.map(uni => (
-              <li key={uni.name}>
-                <span onClick={() => mostrarDetalle(uni)}>
-                  {uni.name} — <em>{uni.country}</em>  
-                  {uni['state-province'] && ` — ${uni['state-province']}`}
-                </span>
-                <button onClick={() => toggleFavorito(uni)}>
-                  {favoritos.some(f => f.name === uni.name) ? '❤️' : '🤍'}
-                </button>
-              </li>
-            ))}
-          </ul>
+                {/* 🔤 Orden */}
+                <select value={orden} onChange={e => setOrden(e.target.value)}>
+                  <option value="">Sin ordenar</option>
+                  <option value="nombre">Ordenar por nombre</option>
+                  <option value="pais">Ordenar por país</option>
+                </select>
+              </div>
+
+              {/* 📋 Lista filtrada */}
+              <ul>
+                {universidadesFiltradas.map(uni => (
+                  <li key={uni.name}>
+                    <span onClick={() => mostrarDetalle(uni)}>
+                      {uni.name} — <em>{uni.country}</em>  
+                      {uni['state-province'] && ` — ${uni['state-province']}`}
+                    </span>
+                    <button onClick={() => toggleFavorito(uni)}>
+                      {favoritos.some(f => f.name === uni.name) ? '❤️' : '🤍'}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          {modo === 'favoritos' && (
+            <ul>
+              {favoritos.map(uni => (
+                <li key={uni.name}>
+                  <span onClick={() => mostrarDetalle(uni)}>{uni.name}</span>
+                  <button onClick={() => toggleFavorito(uni)}>❤️</button>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {modo === 'detalle' && detalle && (
+            <Detalle universidad={detalle} volver={() => setModo('home')} />
+          )}
+
+          {modo === 'informativa' && <Informativa />}
         </>
       )}
-
-      {modo === 'favoritos' && (
-        <ul>
-          {favoritos.map(uni => (
-            <li key={uni.name}>
-              <span onClick={() => mostrarDetalle(uni)}>{uni.name}</span>
-              <button onClick={() => toggleFavorito(uni)}>❤️</button>
-            </li>
-          ))}
-        </ul>
-      )}
-
-      {modo === 'detalle' && detalle && (
-        <Detalle universidad={detalle} volver={() => setModo('home')} />
-      )}
-
-      {modo === 'informativa' && <Informativa />}
     </div>
   )
 }
